@@ -9,19 +9,28 @@ public class ConvertToOctal {
 
         System.out.println("\n\tOctal Convertor");
         System.out.println("\t----------- ---------");
-        System.out.print("	1. Decimal to Octal\n	2. Binary to Octal\n	3. Octal to Octal\n 	Enter Your Choice : ");
+        System.out.print("	1. Decimal to Octal\n	2. Binary to Octal\n	3. Hexadecimal to Octal\n 	Enter Your Choice : ");
         int n = in.nextInt();
         switch (n) {
             case 1:
-                decimal(n);
+                System.out.println("Enter a decimal number: ");
+                int decNum =in.nextInt();
+                decimal(decNum);
                 break;
+            case 2:
+                System.out.println("Enter a binary number: ");
+                int binNum = in.nextInt();
+                binary(n);
+                break;
+            case 3:
+                hexadecimal();
+                break;
+
         }
     }
 
-
-
     // Binary to octal
-    int bnr(int bin) {
+    int binary(int bin) {
         int n = 0, decimal = 0, octa = -1;
         int t = 0;
         int b = bin;
@@ -59,11 +68,11 @@ public class ConvertToOctal {
     }
 
     //Hexa decimal to Octal
-    int hexa(String hexdec_num) {
+    int hexadecimal() {
         int dec_num = 0, k = 1;
         System.out.println("Input a hexadecimal number: ");
         Scanner obj = new Scanner(System.in);
-        hexdec_num = obj.nextLine();
+        String hexdec_num = obj.nextLine();
         String digits = "0123456789ABCDEF";
         hexdec_num = hexdec_num.toUpperCase();
         int v = hexdec_num.length();
