@@ -20,6 +20,11 @@ class FactorialTest {
 
     @Test
     void factorial() {
-        assertEquals(24,f.factorial(4),"testing factorial");
+        assertEquals(24,f.factorial(4),"testing factorial for n > 1");
+        assertEquals(1, f.factorial(0),"Testing factorial for n = 0");
+        assertEquals(1, f.factorial(1), "Testing factorial for n = 1");
+        assertEquals(0, f.factorial(-1), "Testing factorial for n < 0");
     }
+
+
 }

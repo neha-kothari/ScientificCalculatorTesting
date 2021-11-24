@@ -3,43 +3,50 @@ package calculator.operations.algebra;
 import java.util.Scanner;
 
 public class Arithmetic {
+    double number1, number2;
+    String operation;
 
-    public float arithmetic(){
-        int choice;
-        float a,b;
-        float result = 0;
-        Scanner buf = new Scanner(System.in);
+    public Arithmetic() {
+    }
 
-        System.out.print("Enter first number: ");
-        a=buf.nextFloat();
-         System.out.print("Enter second number: ");
-         b=buf.nextFloat();
+    public void run() {
+        getInput();
+        double result = doMath(operation, number1, number2 );
+        System.out.println("Your answer is " + result );
+    }
 
-         System.out.print("\n1: Addition.\n2: Subtraction.");
-         System.out.print("\n3: Multiplication.\n4: Divide.");
-         System.out.print("\n5: Remainder.\n6: Exit.");
+    private void getInput() {
+        Scanner scannerObject = new Scanner(System.in);
+        System.out.println("Enter first number");
+        number1 = scannerObject. nextDouble();
+        System.out.println("Enter second number");
+        number2 = scannerObject. nextDouble();
 
-         System.out.print("\nEnter your choice: ");
-         choice=buf.nextInt();
+        Scanner UserInput = new Scanner(System.in);
+        System.out.println("\nHere are your options:");
+        System.out.println("\n1. Addition, 2. Subtraction, 3. Division, 4. Multiplication");
+        operation = UserInput.next();
+    }
 
-        switch(choice)
+
+    public double  doMath(String operation, double number1, double number2) {
+
+        switch (operation)
         {
-            case 1:
-                result = (a+b); break;
-            case 2:
-                result = (a-b); break;
-            case 3:
-                result = (a*b); break;
-            case 4:
-                result = (float)((float)a/(float)b); break;
-            case 5:
-                result = (a%b); break;
+            case "1":
+                return (number1 + number2);
+
+            case "2":
+                return  (number1 - number2);
+
+            case "3":
+                return (number1 / number2);
+
+            case "4":
+                return (number1 * number2);
+
             default:
-                System.out.println("An Invalid Choice!!!\n");
+                throw new IllegalStateException("Math Operation is not valid");
         }
-        if(choice>=1 && choice<=5)
-            return(result);
-        else
-            return -1;
     }
 }
