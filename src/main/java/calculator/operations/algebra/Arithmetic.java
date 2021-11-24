@@ -2,7 +2,7 @@ package calculator.operations.algebra;
 
 import java.util.Scanner;
 
-public class arithmetic {
+public class Arithmetic {
 
     public float arithmetic(){
         int choice;

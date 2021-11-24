@@ -1,6 +1,6 @@
 package calculator.operations.algebra;
 
-public class factorial {
+public class Factorial {
 
     public int factorial(int a) {
         if (a == 1 || a == 0) {
