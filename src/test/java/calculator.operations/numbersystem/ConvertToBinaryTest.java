@@ -18,5 +18,6 @@ class ConvertToBinaryTest {
 
     @Test
     void convertToBinary() {
+        assertEquals();
     }
 }

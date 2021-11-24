@@ -1,6 +1,6 @@
-package calculator.operations.albegra;
+package calculator.operations.algebra;
 import static org.junit.jupiter.api.Assertions.*;
-import calculator.operations.algebra.Factorial;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
