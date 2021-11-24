@@ -15,15 +15,15 @@ public class ConvertToOctal {
             case 1:
                 System.out.println("Enter a decimal number: ");
                 int decNum =in.nextInt();
-                decimal(decNum);
+                System.out.println(decimal(decNum));
                 break;
             case 2:
                 System.out.println("Enter a binary number: ");
                 int binNum = in.nextInt();
-                binary(n);
+                System.out.println(binary(n));
                 break;
             case 3:
-                hexadecimal();
+                System.out.println(hexadecimal());
                 break;
 
         }
