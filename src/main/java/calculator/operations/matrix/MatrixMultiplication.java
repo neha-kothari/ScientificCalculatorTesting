@@ -7,7 +7,7 @@ public class MatrixMultiplication {
 
     //Function to perform matrix Multiplication.
     int[][] multiply(int[][] mat1, int[][] mat2) {
-        int N = mat1[0].length;
+        int N = mat1.length;
         int[][] prod = new int[N][N];
 
         for (int i = 0; i < N; i++) {

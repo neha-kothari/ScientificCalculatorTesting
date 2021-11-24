@@ -25,7 +25,7 @@ public class MatrixPower {
     }
 
     // Function to return identity matrix of dimension N x N.
-    int[][] identity(int N) {
+    public int[][] identity(int N) {
         int[][] I = new int[N][N];
 
         for(int i = 0; i < N; i++) {
@@ -38,5 +38,6 @@ public class MatrixPower {
         }
         return I;
     }
+
 
 }
