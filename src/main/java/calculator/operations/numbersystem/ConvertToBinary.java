@@ -4,21 +4,19 @@ import java.util.Scanner;
 
 public class ConvertToBinary {
 
-    public StringBuilder cvtbin() {
-        int n,i,x,y;
+    public StringBuilder convertToBinary() {
+        int n, i, x, y;
         String number = new String("");
         StringBuilder newNumber = new StringBuilder();
         Scanner input = new Scanner(System.in);
         System.out.println("Choose input type");
         System.out.println("1.Decimal...2.Hexadecimal...3.Octal");
         n = input.nextInt();
-        if(n == 1)
-        {
+        if (n == 1) {
             System.out.println("Enter the number");
             i = input.nextInt();
             x = i;
-            while(x>0)
-            {
+            while (x > 0) {
                 y = x % 2;
                 number = number + Integer.toString(y);
                 x = x / 2;
@@ -26,18 +24,14 @@ public class ConvertToBinary {
             newNumber.append(number);
             newNumber.reverse();
             return newNumber;
-        }
-        else if(n == 2)
-        {
+        } else if (n == 2) {
             System.out.println("Enter the number");
             number = input.next();
             char ch;
             i = number.length();
-            for(x=0;x<i;x++)
-            {
+            for (x = 0; x < i; x++) {
                 ch = number.charAt(x);
-                switch(ch)
-                {
+                switch (ch) {
                     case '0':
                         newNumber.append("0000");
                         break;
@@ -91,18 +85,14 @@ public class ConvertToBinary {
                 }
             }
             return newNumber;
-        }
-        else if(n == 3)
-        {
+        } else if (n == 3) {
             System.out.println("Enter the number");
             number = input.next();
             char ch;
             i = number.length();
-            for(x=0;x<i;x++)
-            {
+            for (x = 0; x < i; x++) {
                 ch = number.charAt(x);
-                switch(ch)
-                {
+                switch (ch) {
                     case '0':
                         newNumber.append("000");
                         break;
