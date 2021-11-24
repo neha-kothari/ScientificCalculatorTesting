@@ -6,7 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 
 class MatrixPowerTest {
 
-    MatrixPower m =new MatrixPower();
+   MatrixPower m =new MatrixPower();
 
 
     @BeforeEach
