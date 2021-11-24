@@ -14,7 +14,9 @@ public class ConvertToDecimal {
         int n = in.nextInt();
         switch (n) {
             case 1:
-                System.out.println(octal());
+                System.out.println("Enter the Octal Number : ");
+                int oct = in.nextInt();
+                System.out.println(octal(oct));
                 break;
             case 2:
                 System.out.println(binary());
@@ -26,7 +28,7 @@ public class ConvertToDecimal {
         }
     }
 
-    int octal() {
+    int octal(int oct) {
         int n = 0, decimal = 0, octa = -1;
         System.out.println("Enter the Octal Number : ");
         int bin = in.nextInt();
