@@ -20,8 +20,13 @@ class MatrixPowerTest {
 
     @org.junit.jupiter.api.Test
     void powMat(){
-        int[][] response =new int[][]{{67,66},{77,78}};
-        assertEquals(response,m.powMat(new int[][]{{5,6},{7,6}},2),"testing");
+        int[][] expresponse =new int[][]{{67,66},{77,78}};
+        int[][] response = m.powMat(new int[][]{{5,6},{7,6}}, 2);
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                assertEquals(response[i][j],expresponse[i][j],"testing");
+            }
+        }
     }
 
     @org.junit.jupiter.api.Test
