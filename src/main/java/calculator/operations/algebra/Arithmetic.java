@@ -30,7 +30,6 @@ public class Arithmetic {
 
 
     public double  doMath(String operation, double number1, double number2) {
-
         switch (operation)
         {
             case "1":
@@ -46,7 +45,7 @@ public class Arithmetic {
                 return (number1 * number2);
 
             default:
-                throw new IllegalStateException("Math Operation is not valid");
+                return -1;
         }
     }
 }
