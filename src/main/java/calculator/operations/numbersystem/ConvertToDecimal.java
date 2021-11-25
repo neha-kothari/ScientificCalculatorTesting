@@ -19,25 +19,32 @@ public class ConvertToDecimal {
                 System.out.println(octal(oct));
                 break;
             case 2:
-                System.out.println(binary());
+                System.out.println("Enter the Binary Number : ");
+                int bin = in.nextInt();
+                System.out.println(binary(bin));
                 break;
             case 3:
-                System.out.println(hexadecimal());
+                System.out.println("Enter the Hexadecimal Number : ");
+                String hexa = in.next();
+                System.out.println(hexadecimal(hexa));
                 break;
 
         }
     }
 
-    int octal(int oct) {
+    String octal(int oct) {
         int n = 0, decimal = 0, octa = -1;
-        System.out.println("Enter the Octal Number : ");
-        int bin = in.nextInt();
+        int bin = oct;
         int t = 0;
         int b = bin;
         if (b >= 0) {
-            while (t <= 8 && b != 0) {
+            while (t < 8 && b > 0) {
                 t = b % 10;
                 b = b / 10;
+            }
+
+            if (t >= 8 || b < 0) {
+                return "Error";
             }
         }
         if (b == 0) {
@@ -52,14 +59,12 @@ public class ConvertToDecimal {
                 }
             }
         } else
-            System.out.println("Error");
-        return decimal;
+            return "Error";
+        return decimal + "";
     }
 
-    int binary() {
+    String binary(int bin) {
         int n = 0, decimal = 0, octa = -1;
-        System.out.println("Enter the Binary Number : ");
-        int bin = in.nextInt();
         int t = 0;
         int b = bin;
         if (b >= 0) {
@@ -80,23 +85,23 @@ public class ConvertToDecimal {
                 }
             }
         } else
-            System.out.println("Error");
-        return decimal;
+            return "Error";
+        return decimal + "";
     }
 
-    int hexadecimal() {
-        String hexdec_num = "";
+    String hexadecimal(String hexdec_num) {
+
         int dec_num = 0, k = 1;
-        System.out.println("Input a hexadecimal number: ");
-        Scanner obj = new Scanner(System.in);
-        hexdec_num = obj.nextLine();
         String digits = "0123456789ABCDEF";
         hexdec_num = hexdec_num.toUpperCase();
         for (k = 0; k < hexdec_num.length(); k++) {
             char cr = hexdec_num.charAt(k);
+            if (!Character.isDigit(cr) && !(cr == 'A' || cr == 'B' || cr == 'C' || cr == 'D' || cr == 'E' || cr == 'F')) {
+                return "Error";
+            }
             int d = digits.indexOf(cr);
             dec_num = 16 * dec_num + d;
         }
-        return dec_num;
+        return dec_num + "";
     }
 }
