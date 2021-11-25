@@ -19,7 +19,7 @@ class MatrixPowerTest {
 
 
     @Test
-    void powZeroMat(){
+    void powerZeroMatrix(){
         int[][] expresponse =new int[][]{{1,0},{0,1}};
         int[][] response = m.powMat(new int[][]{{5,6},{7,6}}, 0);
         for (int i = 0; i < 2; i++) {
@@ -30,7 +30,7 @@ class MatrixPowerTest {
     }
 
     @Test
-    void powOneMat(){
+    void powerOneMatrix(){
         int[][] expresponse =new int[][]{{5,6},{7,6}};
         int[][] response = m.powMat(new int[][]{{5,6},{7,6}}, 1);
         for (int i = 0; i < 2; i++) {
@@ -41,7 +41,7 @@ class MatrixPowerTest {
     }
 
     @Test
-    void powTwoMat(){
+    void powerTwoMatrix(){
         int[][] expresponse =new int[][]{{67,66},{77,78}};
         int[][] response = m.powMat(new int[][]{{5,6},{7,6}}, 2);
         for (int i = 0; i < 2; i++) {
@@ -52,7 +52,7 @@ class MatrixPowerTest {
     }
 
     @Test
-    void powThreeMat(){
+    void powerThreeMatrix(){
         int[][] expresponse =new int[][]{{20,14},{28,20}};
         int[][] response = m.powMat(new int[][]{{2,1},{2,2}}, 3);
         for (int i = 0; i < 2; i++) {
@@ -63,7 +63,7 @@ class MatrixPowerTest {
     }
 
     @Test
-    void identityMat(){
+    void identityMatrix(){
         int[][] expresponse =new int[][]{{1,0},{0,1}};
        int[][] response = m.identity(2);
 
