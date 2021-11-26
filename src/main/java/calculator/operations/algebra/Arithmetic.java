@@ -11,7 +11,7 @@ public class Arithmetic {
 
     public void run() {
         getInput();
-        double result = doMath(operation, number1, number2 );
+        String result = doMath(operation, number1, number2 );
         System.out.println("Your answer is " + result );
     }
 
@@ -29,23 +29,23 @@ public class Arithmetic {
     }
 
 
-    public double  doMath(String operation, double number1, double number2) {
+    public String  doMath(String operation, double number1, double number2) {
         switch (operation)
         {
             case "1":
-                return (number1 + number2);
+                return (number1 + number2) + "";
 
             case "2":
-                return  (number1 - number2);
+                return  (number1 - number2) + "";
 
             case "3":
-                return (number1 / number2);
+                return (number1 / number2) + "";
 
             case "4":
-                return (number1 * number2);
+                return (number1 * number2) + "";
 
             default:
-                return -1;
+                return "Invalid Input";
         }
     }
 }
