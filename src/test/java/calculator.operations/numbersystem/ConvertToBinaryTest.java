@@ -21,12 +21,11 @@ class ConvertToBinaryTest {
 
     @Test
     void menuTest() {
-        String s = "Wrong Input!";
-        assertTrue( cbt.menu(5, "").toString().equals(s));
+
         assertEquals("10", cbt.menu(1, "2").toString());
-        assertEquals("", cbt.menu(1, "").toString());
-        assertEquals("", cbt.menu(2, "").toString());
-        assertEquals("", cbt.menu(3, "").toString());
+        assertEquals("101010110001001000110000", cbt.menu(2, "AB1230").toString());
+        assertEquals("001010011000", cbt.menu(3, "1230").toString());
+        assertEquals("Wrong Input!", cbt.menu(4, "").toString());
     }
 
     @Test
