@@ -57,6 +57,6 @@ public class Temperature {
         {
             return ((temp * 9.0 / 5.0) + 32.0);
         }
-        throw new IllegalStateException("Math toUnit is not valid");
+        return -1;
     }
 }

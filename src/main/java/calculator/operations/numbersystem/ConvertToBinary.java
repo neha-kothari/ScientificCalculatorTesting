@@ -83,7 +83,6 @@ public class ConvertToBinary {
     }
 
     public StringBuilder octalToBinary(String number) {
-
         char ch;
         StringBuilder newNumber = new StringBuilder();
         int i = number.length();
@@ -115,8 +114,7 @@ public class ConvertToBinary {
                     newNumber.append("111");
                     break;
                 default:
-                    System.out.println("Input error");
-            }
+                    System.out.println("Input error"); }
         }
         return newNumber;
     }
@@ -133,7 +131,6 @@ public class ConvertToBinary {
     }
 
     public StringBuilder menu(int operation, String number) {
-
         if (operation == 1) {
             if (number.isEmpty()) {
                 return new StringBuilder();
