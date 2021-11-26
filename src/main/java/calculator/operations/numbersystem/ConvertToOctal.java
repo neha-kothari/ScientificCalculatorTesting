@@ -23,7 +23,9 @@ public class ConvertToOctal {
                 System.out.println(binary(n));
                 break;
             case 3:
-                System.out.println(hexadecimal());
+                System.out.println("Input a hexadecimal number: ");
+                String hexNum = in.next();
+                System.out.println(hexadecimal(hexNum));
                 break;
 
         }
@@ -68,11 +70,9 @@ public class ConvertToOctal {
     }
 
     //Hexa decimal to Octal
-    int hexadecimal() {
+    int hexadecimal(String hexdec_num) {
+
         int dec_num = 0, k = 1;
-        System.out.println("Input a hexadecimal number: ");
-        Scanner obj = new Scanner(System.in);
-        String hexdec_num = obj.nextLine();
         String digits = "0123456789ABCDEF";
         hexdec_num = hexdec_num.toUpperCase();
         int v = hexdec_num.length();
