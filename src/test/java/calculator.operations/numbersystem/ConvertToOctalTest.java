@@ -8,6 +8,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ConvertToOctalTest {
 
+    ConvertToOctal cto = new ConvertToOctal();
+
     @BeforeEach
     void setUp() {
     }
@@ -22,13 +24,25 @@ class ConvertToOctalTest {
 
     @Test
     void binary() {
+
+        assertEquals(17, cto.binary(1111));
+        assertEquals(-1, cto.binary(-2));
+        assertEquals(1, cto.binary(1));
     }
 
     @Test
     void decimal() {
+
+        assertEquals(17, cto.decimal(15));
+        assertEquals(-144, cto.decimal(-100));
+        assertEquals(1, cto.decimal(1));
     }
 
     @Test
     void hexadecimal() {
+
+        assertEquals(21, cto.hexadecimal("11"));
+        assertEquals(-1, cto.hexadecimal("-100"));
+        assertEquals(1, cto.hexadecimal("1"));
     }
 }

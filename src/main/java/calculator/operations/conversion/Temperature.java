@@ -29,7 +29,7 @@ public class Temperature {
     }
 
 
-    public double  convertTemperature(String toUnit, String fromUnit, double temp) {
+    public double convertTemperature(String toUnit, String fromUnit, double temp) {
 
         if(toUnit.equals(fromUnit))
             return temp;

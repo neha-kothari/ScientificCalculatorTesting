@@ -21,6 +21,7 @@ class ConvertToDecimalTest {
     @Test
     void octal() {
         assertEquals("57", cdt.octal(71));
+        assertEquals("0", cdt.octal(0));
         assertEquals("Error", cdt.octal(8));
         assertEquals("Error", cdt.octal(91));
         assertEquals("Error", cdt.octal(-1));
