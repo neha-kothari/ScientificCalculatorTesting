@@ -25,9 +25,10 @@ class ConvertToOctalTest {
     @Test
     void binary() {
 
-        assertEquals(17, cto.binary(1111));
-        assertEquals(-1, cto.binary(-2));
-        assertEquals(1, cto.binary(1));
+       assertEquals(17, cto.binary(1111));
+       assertEquals(-1, cto.binary(-2));
+       assertEquals(3, cto.binary(11));
+       assertEquals(1,cto.binary(1));
     }
 
     @Test
@@ -36,6 +37,8 @@ class ConvertToOctalTest {
         assertEquals(17, cto.decimal(15));
         assertEquals(-144, cto.decimal(-100));
         assertEquals(1, cto.decimal(1));
+        assertEquals(0, cto.decimal(0));
+
     }
 
     @Test
